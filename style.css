@@ -122,6 +122,10 @@ textarea {
     height: 500px;
 } 
 
+input#botao{
+    margin: 10px auto 0px;
+}
+
 footer {
     height: 100%;
     grid-area: footer;
@@ -155,15 +159,7 @@ footer p {
 #copyrightRodape{
     text-align: center;
 }
-/* footer ul {
-    list-style: none;
-}
 
-footer ul li ul li{
-    display: inline-block;
-    padding-left: 75px;
-}
-*/
 footer span{
     padding: 20px 0;
     font-size:  12px;
@@ -230,56 +226,10 @@ footer span{
         padding-left: 20px;
     }
 
-    #contatoContainer #celular{
-        display: flex;
+    #google{
+        width: 650px;
+        padding-left: 30px;
     }
-
-    /* #contatoContainer form {
-        width: 50%;
-        height: auto;
-        margin: 0 0 0 0;
-        float: left;
-        display: block;
-    }
-
-    #contatoContainer form input {
-        width: 100%;
-        height: 50px;
-        line-height: 50px;
-        font-size: 16px;
-        padding: 0 20px;
-        margin-bottom: 20px;
-        float: left;
-        display: block;
-        border-radius: 3px;
-        border: 1px #e4e4e4 solid;
-        background-color: #e4e4e4;
-    }
-
-    #contatoContainer form #celular {
-        width: 50%;
-        height: auto;
-        float: left;
-        display: block;
-    }
-
-    #contatoContainer form #fixo {
-        width: 50%;
-        height: auto;
-        float: right;
-        display: block;
-    }
-
-    #contatoContainer form label {
-        width: 100%;
-        height: auto;
-        line-height: 22px;
-        font-size: 16px;
-        color: #333;
-        margin-bottom: 5px;
-        float: left;
-        display: block;
-    } */
 
     footer {
         flex-direction: row;
