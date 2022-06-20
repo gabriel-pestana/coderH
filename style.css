@@ -1,0 +1,302 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.gridContainer {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "header" "section" "footer";
+}
+
+header {
+    grid-area: header;
+}
+
+section {
+    grid-area: section;
+    width: 100%;
+}
+
+nav {
+    background-color: rgb(39, 39, 39);
+    height: auto;
+    display: block;
+}
+
+nav ul{
+    list-style: none;
+    text-align: center;
+}
+
+nav ul li{
+    padding: 10px 0;
+}
+
+
+nav ul li a{
+    color: #FFF;
+    text-decoration: none;
+}
+
+#logo{
+    color: skyblue;
+    font-weight: bold;
+    font-size: 30px;
+    max-height: 100px;
+}
+ 
+#index img{
+    width: 100%;
+    height: 500px;
+    display: block;
+    align-items: center;
+}
+
+#servicos, 
+#sobrenos,
+#portfolio,
+#equipe,
+#contato{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-evenly;
+    height: auto;
+    padding: 30px 0;
+} 
+
+#sobrenos img, 
+#sobrenos p,
+#servicos p,
+#portfolio img,
+#google
+{
+    padding-top: 20px;
+    max-width:98%;
+}
+
+#servicos p{
+    max-width: 180px;
+}
+
+#servicos div{
+    padding-bottom: 20px;
+}
+
+#portfolio img {
+    height: 300px;
+    width: 300px;
+}
+
+#equipe img{
+    height: 350px;
+    width: 350px;
+    border-radius: 300px;
+    border: 1px solid rgb(39, 39, 39);
+    margin: 0 35px;
+}
+
+label{
+    display: block;
+    text-align: left;
+    padding: 5px 0;
+}
+
+input,
+textarea,
+input,
+#google {
+    width: 100%;
+}
+
+textarea {
+    height: 30px;
+    resize: none;    
+}
+
+#google{
+    height: 500px;
+} 
+
+footer {
+    height: 100%;
+    grid-area: footer;
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    align-items: center;
+    background-color: rgb(39, 39, 39);
+    justify-content: space-evenly;
+    padding: 30px 0;
+    color: #FFF;
+}
+
+footer h4{
+    text-align: left;
+}
+
+footer p {
+    font-size: 12px;
+    max-width: 250px;
+    text-align: left;
+    padding: 10px 0;
+}
+
+#sobreRodape, 
+#contatoRodape, 
+#copyrightRodape{
+    width: 49%;
+}
+
+#copyrightRodape{
+    text-align: center;
+}
+/* footer ul {
+    list-style: none;
+}
+
+footer ul li ul li{
+    display: inline-block;
+    padding-left: 75px;
+}
+*/
+footer span{
+    padding: 20px 0;
+    font-size:  12px;
+    font-weight: bold;
+} 
+
+@media only screen and (min-width: 1024px){
+    .gridContainer{
+        grid-template-columns: auto;
+        grid-template-rows: auto 984px auto;
+        grid-template-areas: "header" "section" "footer";
+    }
+
+    nav ul{
+        text-align: right;
+    }
+    
+    nav ul li {
+        display: inline;
+    }
+    
+    nav ul li a{
+        padding: 20px;
+        display: inline-block;
+    }
+    
+    nav ul li:first-child{
+        float: left;
+    }  
+
+    #logo{
+        padding: 0px 5px 5px 150px;
+    }
+
+    #index img{
+        height: 984px;
+    }
+
+    #sobreContainer,
+    #servicosContainer1,
+    #servicosContainer2,
+    #portfolioContainer1,
+    #portfolioContainer2,
+    #equipeContainer1,
+    #equipeContainer2,
+    #contatoContainer {
+        display: flex;
+        align-items: center;
+        text-align: center;
+    } 
+
+    #sobrenos h1,
+    #sobrenos p{
+        width: 500px;
+        text-align: left;
+    }
+
+    #sobrenos img{
+        height: 500px;
+        width:  500px;
+    }
+
+    #portfolio img{
+        padding-left: 20px;
+    }
+
+    #contatoContainer #celular{
+        display: flex;
+    }
+
+    /* #contatoContainer form {
+        width: 50%;
+        height: auto;
+        margin: 0 0 0 0;
+        float: left;
+        display: block;
+    }
+
+    #contatoContainer form input {
+        width: 100%;
+        height: 50px;
+        line-height: 50px;
+        font-size: 16px;
+        padding: 0 20px;
+        margin-bottom: 20px;
+        float: left;
+        display: block;
+        border-radius: 3px;
+        border: 1px #e4e4e4 solid;
+        background-color: #e4e4e4;
+    }
+
+    #contatoContainer form #celular {
+        width: 50%;
+        height: auto;
+        float: left;
+        display: block;
+    }
+
+    #contatoContainer form #fixo {
+        width: 50%;
+        height: auto;
+        float: right;
+        display: block;
+    }
+
+    #contatoContainer form label {
+        width: 100%;
+        height: auto;
+        line-height: 22px;
+        font-size: 16px;
+        color: #333;
+        margin-bottom: 5px;
+        float: left;
+        display: block;
+    } */
+
+    footer {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: stretch;
+        justify-content: center;
+    }
+
+    #sobreRodape, #contatoRodape{
+        flex-basis: 20%;
+    }
+
+    #sobreRodape {
+        align-content: flex-end;
+    }
+
+    #copyrightRodape{
+        flex-basis: 100%;
+    }
+}
