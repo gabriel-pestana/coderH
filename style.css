@@ -108,14 +108,23 @@ label{
 
 input,
 textarea,
-input,
 #google {
     width: 100%;
+    height: 27px;
+}
+
+input[type=text],
+input[type=email],
+textarea {
+    border: 1px #949494 solid;
+    background-color: #e4e4e4;
+    border-radius: 3px;
 }
 
 textarea {
-    height: 30px;
+    height: 230px;
     resize: none;    
+    overflow: auto;
 }
 
 #google{
@@ -123,7 +132,22 @@ textarea {
 } 
 
 input#botao{
+    height: 50px;
+    border-radius: 2px;
     margin: 10px auto 0px;
+    line-height: 50px;
+    font-size: 14px;
+    text-align: center;
+    color: #333;
+    margin: 25px auto 0 auto;
+    border: 1px #333 solid;
+    cursor: pointer;
+}
+
+input#botao:hover{
+    color: #fff;
+    border: 1px #176eac solid;
+    background-color: #176eac;
 }
 
 footer {
@@ -205,7 +229,8 @@ footer span{
     #portfolioContainer2,
     #equipeContainer1,
     #equipeContainer2,
-    #contatoContainer {
+    #contatoContainer,
+    #telefoneContainer {
         display: flex;
         align-items: center;
         text-align: center;
@@ -222,8 +247,21 @@ footer span{
         width:  500px;
     }
 
+    #servicosContainer1 div,
+    #servicosContainer2 div{
+        margin: 0 150px;
+    }
+
     #portfolio img{
         padding-left: 20px;
+    }
+
+    #telefoneContainer{
+        justify-content: space-between;
+    }
+
+    #celular{
+        margin-right: 15px;
     }
 
     #google{
