@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -37,8 +38,12 @@ nav ul li{
 
 
 nav ul li a{
-    color: #FFF;
+    color: rgb(197, 197, 197);
     text-decoration: none;
+}
+
+nav ul li a:hover{
+    color: rgb(255, 255, 255);
 }
 
 #logo{
@@ -46,6 +51,11 @@ nav ul li a{
     font-weight: bold;
     font-size: 30px;
     max-height: 100px;
+    animation-name: logo;
+    animation-iteration-count: initial;
+    animation-timing-function: ease-in;
+    animation-duration: 0.3s;
+    animation-delay: 0s;   
 }
  
 #index img{
@@ -288,3 +298,9 @@ footer span{
         flex-basis: 100%;
     }
 }
+
+@keyframes logo {
+    0%{ transform: skewX(-10deg); }
+    100%{ transform: skewY(5deg);}
+ }
+ 
