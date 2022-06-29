@@ -81,16 +81,11 @@ nav ul li a:hover{
 
 #sobrenos img, 
 #sobrenos p,
-#servicos p,
 #portfolio img,
 #google
 {
     padding-top: 20px;
     max-width:98%;
-}
-
-#servicos p{
-    max-width: 180px;
 }
 
 #servicos div{
@@ -233,8 +228,6 @@ footer span{
     }
 
     #sobreContainer,
-    #servicosContainer1,
-    #servicosContainer2,
     #portfolioContainer1,
     #portfolioContainer2,
     #equipeContainer1,
@@ -255,11 +248,6 @@ footer span{
     #sobrenos img{
         height: 500px;
         width:  500px;
-    }
-
-    #servicosContainer1 div,
-    #servicosContainer2 div{
-        margin: 0 150px;
     }
 
     #portfolio img{
