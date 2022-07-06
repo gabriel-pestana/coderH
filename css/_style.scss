@@ -1,0 +1,343 @@
+@import "_reset.scss";
+@import "_mixins.scss";
+
+$tamanhoMedia: 1024px;
+
+.gridContainer {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "header" "section" "footer";
+
+    @media only screen and (min-width: $tamanhoMedia) {
+        grid-template-columns: auto;
+        grid-template-rows: auto 984px auto;
+        grid-template-areas: "header" "section" "footer";
+    }
+}
+
+header {
+    grid-area: header;
+}
+
+section {
+    grid-area: section;
+    width: 100%;
+}
+
+nav {
+    background-color: rgb(39, 39, 39);
+    height: auto;
+    display: block;
+    ul {
+        list-style: none;
+        text-align: center;
+
+        @media only screen and (min-width: $tamanhoMedia) {
+            text-align: right;
+        }
+
+        li {
+            padding: 10px 0;
+
+            @media only screen and (min-width: $tamanhoMedia) {
+                display: inline;
+            }
+
+            &:first-child {
+                @media only screen and (min-width: $tamanhoMedia) {
+                    float: left;
+                }
+            }
+
+            a {
+                color: rgb(197, 197, 197);
+                text-decoration: none;
+
+                @media only screen and (min-width: $tamanhoMedia) {
+                    padding: 20px;
+                    display: inline-block;
+                }
+
+                &:hover {
+                    color: rgb(255, 255, 255);
+                }
+            }
+        }
+    }
+}
+
+#logo {
+    color: skyblue;
+    font-weight: bold;
+    font-size: 30px;
+    max-height: 100px;
+    animation-name: logo;
+    animation-iteration-count: initial;
+    animation-timing-function: ease-in;
+    animation-duration: 0.3s;
+    animation-delay: 0s;
+
+    @media only screen and (min-width: $tamanhoMedia) {
+        padding: 0px 5px 5px 150px;
+    }
+}
+
+#index {
+    img {
+        width: 100%;
+        height: 500px;
+        display: block;
+        align-items: center;
+
+        @media only screen and (min-width: $tamanhoMedia) {
+            height: 984px;
+        }
+    }
+}
+
+#servicos {
+    @include padrao-divs();
+
+    div {
+        padding-bottom: 20px;
+    }
+}
+
+#sobrenos {
+    @include padrao-divs();
+
+    img {
+        @include reset-conteudo();
+        @media only screen and (min-width: $tamanhoMedia) {
+            height: 500px;
+            width: 500px;
+        }
+    }
+
+    p {
+        @include reset-conteudo();
+        @media only screen and (min-width: $tamanhoMedia) {
+            width: 500px;
+            text-align: left;
+        }
+    }
+
+    h1 {
+        @media only screen and (min-width: $tamanhoMedia) {
+            width: 500px;
+            text-align: left;
+        }
+    }
+}
+
+#portfolio {
+    @include padrao-divs();
+
+    img {
+        @include reset-conteudo();
+
+        height: 300px;
+        width: 300px;
+
+        @media only screen and (min-width: $tamanhoMedia) {
+            padding-left: 20px;
+        }
+    }
+}
+
+#equipe {
+    @include padrao-divs();
+
+    img {
+        height: 350px;
+        width: 350px;
+        border-radius: 300px;
+        border: 1px solid rgb(39, 39, 39);
+        margin: 0 35px;
+    }
+}
+
+#contato {
+    @include padrao-divs();
+}
+
+#google {
+    @include reset-conteudo();
+    @include ajusta-forms();
+
+    height: 500px;
+
+    @media only screen and (min-width: $tamanhoMedia) {
+        width: 650px;
+        padding-left: 30px;
+    }
+}
+
+label {
+    display: block;
+    text-align: left;
+    padding: 5px 0;
+}
+
+input {
+    @include ajusta-forms();
+
+    #botao {
+        height: 50px;
+        border-radius: 2px;
+        margin: 10px auto 0px;
+        line-height: 50px;
+        font-size: 14px;
+        text-align: center;
+        color: #333;
+        margin: 25px auto 0 auto;
+        border: 1px #333 solid;
+        cursor: pointer;
+        &:hover {
+            color: #fff;
+            border: 1px #176eac solid;
+            background-color: #176eac;
+        }
+    }
+}
+
+textarea {
+    @include ajusta-forms();
+}
+
+input[type="text"] {
+    @include estilo-forms();
+}
+
+input[type="email"] {
+    @include estilo-forms();
+}
+
+textarea {
+    @include estilo-forms();
+    height: 230px;
+    resize: none;
+    overflow: auto;
+}
+
+footer {
+    height: 100%;
+    grid-area: footer;
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    align-items: center;
+    background-color: rgb(39, 39, 39);
+    justify-content: space-evenly;
+    padding: 30px 0;
+    color: #fff;
+
+    h4 {
+        text-align: left;
+    }
+
+    p {
+        font-size: 12px;
+        max-width: 250px;
+        text-align: left;
+        padding: 10px 0;
+    }
+
+    span {
+        padding: 20px 0;
+        font-size: 12px;
+        font-weight: bold;
+    }
+
+    @media only screen and (min-width: $tamanhoMedia) {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: stretch;
+        justify-content: center;
+    }
+}
+
+#sobreRodape {
+    width: 49%;
+
+    @media only screen and (min-width: $tamanhoMedia) {
+        flex-basis: 20%;
+        align-content: flex-end;
+    }
+}
+
+#contatoRodape {
+    width: 49%;
+
+    @media only screen and (min-width: $tamanhoMedia) {
+        flex-basis: 20%;
+    }
+}
+
+#copyrightRodape {
+    width: 49%;
+    text-align: center;
+    
+    @media only screen and (min-width: $tamanhoMedia) {
+        flex-basis: 100%;
+    }
+}
+
+#sobreContainer {
+    @media only screen and (min-width: $tamanhoMedia) {
+        @include reset-conteudo-desktop();
+    }
+}
+
+#portfolioContainer1 {
+    @media only screen and (min-width: $tamanhoMedia) {
+        @include reset-conteudo-desktop();
+    }
+}
+
+#portfolioContainer2 {
+    @media only screen and (min-width: $tamanhoMedia) {
+        @include reset-conteudo-desktop();
+    }
+}
+
+#equipeContainer1 {
+    @media only screen and (min-width: $tamanhoMedia) {
+        @include reset-conteudo-desktop();
+    }
+}
+
+#equipeContainer2 {
+    @media only screen and (min-width: $tamanhoMedia) {
+        @include reset-conteudo-desktop();
+    }
+}
+
+#contatoContainer {
+    @media only screen and (min-width: $tamanhoMedia) {
+        @include reset-conteudo-desktop();
+    }
+}
+
+#telefoneContainer {
+    @media only screen and (min-width: $tamanhoMedia) {
+        @include reset-conteudo-desktop();
+        justify-content: space-between;
+    }
+}
+
+#celular {
+    @media only screen and (min-width: $tamanhoMedia) {
+        margin-right: 15px;
+    }
+}
+
+@keyframes logo {
+    0% {
+        transform: skewX(-10deg);
+    }
+    100% {
+        transform: skewY(5deg);
+    }
+}
