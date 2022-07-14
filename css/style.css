@@ -328,47 +328,7 @@ footer span {
 }
 
 @media only screen and (min-width: 1024px) {
-  #sobreContainer {
-    display: flex;
-    align-items: center;
-    text-align: center;
-  }
-}
-
-@media only screen and (min-width: 1024px) {
-  #portfolioContainer1 {
-    display: flex;
-    align-items: center;
-    text-align: center;
-  }
-}
-
-@media only screen and (min-width: 1024px) {
-  #portfolioContainer2 {
-    display: flex;
-    align-items: center;
-    text-align: center;
-  }
-}
-
-@media only screen and (min-width: 1024px) {
-  #equipeContainer1 {
-    display: flex;
-    align-items: center;
-    text-align: center;
-  }
-}
-
-@media only screen and (min-width: 1024px) {
-  #equipeContainer2 {
-    display: flex;
-    align-items: center;
-    text-align: center;
-  }
-}
-
-@media only screen and (min-width: 1024px) {
-  #contatoContainer {
+  #sobreContainer, #telefoneContainer, #contatoContainer, #equipeContainer2, #equipeContainer1, #portfolioContainer2, #portfolioContainer1 {
     display: flex;
     align-items: center;
     text-align: center;
@@ -377,9 +337,6 @@ footer span {
 
 @media only screen and (min-width: 1024px) {
   #telefoneContainer {
-    display: flex;
-    align-items: center;
-    text-align: center;
     justify-content: space-between;
   }
 }

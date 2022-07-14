@@ -1,7 +1,8 @@
+@import "_base.scss";
 @import "_reset.scss";
 @import "_mixins.scss";
 
-$tamanhoMedia: 1024px;
+$tamanhoMedia: map-get($base, tamanhoMedia);
 
 .gridContainer {
     display: grid;
@@ -26,7 +27,7 @@ section {
 }
 
 nav {
-    background-color: rgb(39, 39, 39);
+    background-color: map-get($base, "cor");
     height: auto;
     display: block;
     ul {
@@ -68,7 +69,7 @@ nav {
 }
 
 #logo {
-    color: skyblue;
+    color: map-get($base, corLogo);
     font-weight: bold;
     font-size: 30px;
     max-height: 100px;
@@ -228,7 +229,7 @@ footer {
     flex-direction: column;
     align-content: space-around;
     align-items: center;
-    background-color: rgb(39, 39, 39);
+    background-color: map-get($base, cor);
     justify-content: space-evenly;
     padding: 30px 0;
     color: #fff;
@@ -291,38 +292,28 @@ footer {
 }
 
 #portfolioContainer1 {
-    @media only screen and (min-width: $tamanhoMedia) {
-        @include reset-conteudo-desktop();
-    }
+    @extend #sobreContainer;
 }
 
 #portfolioContainer2 {
-    @media only screen and (min-width: $tamanhoMedia) {
-        @include reset-conteudo-desktop();
-    }
+    @extend #sobreContainer;
 }
 
 #equipeContainer1 {
-    @media only screen and (min-width: $tamanhoMedia) {
-        @include reset-conteudo-desktop();
-    }
+    @extend #sobreContainer;
 }
 
 #equipeContainer2 {
-    @media only screen and (min-width: $tamanhoMedia) {
-        @include reset-conteudo-desktop();
-    }
+    @extend #sobreContainer;
 }
 
 #contatoContainer {
-    @media only screen and (min-width: $tamanhoMedia) {
-        @include reset-conteudo-desktop();
-    }
+   @extend #sobreContainer;
 }
 
 #telefoneContainer {
+    @extend #sobreContainer;
     @media only screen and (min-width: $tamanhoMedia) {
-        @include reset-conteudo-desktop();
         justify-content: space-between;
     }
 }
